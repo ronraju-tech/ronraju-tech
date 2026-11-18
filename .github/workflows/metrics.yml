@@ -35,7 +35,7 @@ jobs:
 
           # Which repos to count: ones you own and ones you're a collaborator on.
           # Add ", organization_member" to also count repos in orgs you belong to.
-          repositories_affiliations: owner
+          repositories_affiliations: owner, collaborator
 
           # Languages card
           plugin_languages: yes
