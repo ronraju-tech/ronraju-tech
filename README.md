@@ -100,6 +100,10 @@
 ## 📊 GitHub Activity
 
 <p align="center">
+  <img src="./metrics.languages.svg" alt="Most used languages" />
+</p>
+
+<p align="center">
   <img src="https://streak-stats.demolab.com?user=ronraju-tech&theme=tokyonight&hide_border=true" />
 </p>
 
