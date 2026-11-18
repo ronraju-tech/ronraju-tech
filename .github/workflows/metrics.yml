@@ -1,0 +1,48 @@
+# Save this file in your ronraju-tech/ronraju-tech repo as:
+#   .github/workflows/metrics.yml
+#
+# It builds a "Most used languages" card from your public AND private repos
+# and commits it to the repo as metrics.languages.svg, which your README shows.
+
+name: Metrics
+
+on:
+  schedule:
+    - cron: "30 0 * * *"   # every day at 06:00 IST (00:30 UTC)
+  workflow_dispatch:        # lets you run it by hand from the Actions tab
+
+permissions:
+  contents: write           # needed to commit the generated SVG
+
+concurrency:
+  group: metrics
+  cancel-in-progress: true
+
+jobs:
+  languages:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: lowlighter/metrics@latest
+        with:
+          # Classic personal access token with the "repo" scope,
+          # stored as a repository secret named METRICS_TOKEN.
+          token: ${{ secrets.METRICS_TOKEN }}
+
+          filename: metrics.languages.svg
+          template: classic
+          base: ""                       # hide the default header/activity blocks
+          config_timezone: Asia/Kolkata
+
+          # Which repos to count: ones you own and ones you're a collaborator on.
+          # Add ", organization_member" to also count repos in orgs you belong to.
+          repositories_affiliations: owner, collaborator
+
+          # Languages card
+          plugin_languages: yes
+          plugin_languages_sections: most-used
+          plugin_languages_details: percentage
+          plugin_languages_limit: 8
+          plugin_languages_threshold: 1%
+          plugin_languages_ignored: html, css
+          # Skip repos that would skew the numbers (e.g. this profile repo):
+          plugin_languages_skipped: ronraju-tech/ronraju-tech
