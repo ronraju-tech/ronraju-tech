@@ -1,4 +1,4 @@
-<h1 align="center">Hi👋, I'm Ron Raju John</h1>
+<h1 align="center">Hi 👋, I'm Ron Raju John</h1>
 <h3 align="center">☁️ Senior DevOps & Platform Engineer · 🛡️ SRE · 📊 DataOps</h3>
 
 <p align="center">
@@ -97,12 +97,7 @@
 
 ---
 
-## 📊 GitHub Stats
-
-<p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=ronraju-tech&show_icons=true&theme=tokyonight&hide_border=true" />
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ronraju-tech&layout=compact&theme=tokyonight&hide_border=true" />
-</p>
+## 📊 GitHub Activity
 
 <p align="center">
   <img src="https://streak-stats.demolab.com?user=ronraju-tech&theme=tokyonight&hide_border=true" />
